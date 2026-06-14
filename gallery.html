@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Juicy Culinary</title>
+  <meta name="description" content="Browse our gallery of custom luxury cakes — birthday, wedding, celebration, and custom designs crafted in Abuja.">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/ style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo-bg.jpg" alt="Juicy Culinary" class="nav-logo-img">
+    <div class="nav-logo-text">Juicy Culinary<span>Abuja, Nigeria</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="dark-toggle" aria-label="Toggle dark mode"></button>
+    <a href="order.html" class="btn btn-primary">Order a Cake</a>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-overlay"></div>
+<nav class="mobile-menu">
+  <a href="index.html" class="mobile-menu-link">Home</a>
+  <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+  <a href="order.html" class="mobile-menu-link">Order a Cake</a>
+  <a href="about.html" class="mobile-menu-link">About</a>
+  <a href="contact.html" class="mobile-menu-link">Contact</a>
+  <div class="mobile-menu-cta">
+    <a href="https://wa.me/2347047214558" target="_blank" class="btn btn-wa" style="width:100%;justify-content:center;">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+    </a>
+  </div>
+</nav>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="page-banner-left">
+    <div class="section-label reveal"><span class="t-label">Our Portfolio</span></div>
+    <h1 class="t-display reveal d1">The Work</h1>
+  </div>
+  <div class="page-banner-right reveal fade-up d2">
+    <p class="t-body-lg">Every piece here was made for a real person, a real occasion. Browse by category or scroll through the full collection.</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="birthday">Birthday</button>
+  <button class="filter-btn" data-filter="wedding">Wedding</button>
+  <button class="filter-btn" data-filter="celebration">Celebration</button>
+  <button class="filter-btn" data-filter="custom">Custom</button>
+  <span class="gallery-count" aria-live="polite"></span>
+</div>
+
+<!-- GALLERY GRID — alternating slide-in directions -->
+<section class="gallery-section-inner">
+  <div class="masonry-grid">
+
+    <div class="gallery-item reveal-left"
+         data-category="birthday"
+         data-lb="images/cake-butterfly.jpg"
+         data-lb-alt="Birthday cake with gold butterflies and fresh roses"
+         data-lb-label="Birthday Cake · Gold Butterflies">
+      <img src="images/Gold Butterflies.jpg" alt="Birthday cake with gold butterfly decorations and fresh roses" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Birthday</span>
+          Gold Butterfly Cake
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-right"
+         data-category="custom"
+         data-lb="images/cake-pink-geode.jpg"
+         data-lb-alt="Pink cake with gold geode detail"
+         data-lb-label="Custom Geode Cake · Pink & Gold">
+      <img src="images/cake-pink-gold.jpg" alt="Pink birthday cake with gold leaf geode detail and silk roses" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Custom</span>
+          Pink Geode Cake
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-left"
+         data-category="celebration"
+         data-lb="images/cake-navy-60.jpg"
+         data-lb-alt="Navy blue 60th birthday milestone cake"
+         data-lb-label="Hello 60 · Celebration Cake">
+      <img src="images/cake-navy-60.jpg" alt="Navy blue and gold 60th birthday celebration cake" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Celebration</span>
+          Hello 60 Cake
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-right"
+         data-category="custom"
+         data-lb="images/cake-green-ribbon.jpg"
+         data-lb-alt="Green cake with black ribbon bows"
+         data-lb-label="Custom Green Ribbon Cake">
+      <img src="images/cake-green-ribbon.jpg" alt="Green textured cake with black ribbon bow details" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Custom</span>
+          Green Ribbon Cake
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-left"
+         data-category="birthday"
+         data-lb="images/cake-butterfly.jpg"
+         data-lb-label="Birthday Cake">
+      <img src="images/cake-butterfly.jpg" alt="Birthday cake" loading="lazy" style="object-position:center 70%">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Birthday</span>
+          Floral Birthday Cake
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-right"
+         data-category="wedding"
+         data-lb="images/cake-pink-geode.jpg"
+         data-lb-label="Wedding Cake">
+      <img src="images/cake-pink-geode.jpg" alt="Wedding cake" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Wedding</span>
+          Ivory Wedding Cake
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-left"
+         data-category="celebration"
+         data-lb="images/cake-navy-60.jpg"
+         data-lb-label="Celebration Cake">
+      <img src="images/Milestone Cake.jpg" alt="Celebration cake" loading="lazy" style="object-position:right center">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Celebration</span>
+          Milestone Cake
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-right"
+         data-category="custom"
+         data-lb="images/cake-green-ribbon.jpg"
+         data-lb-label="Custom Design">
+      <img src="images/Vintage Chic.jpg" alt="Custom cake design" loading="lazy" style="object-position:center 30%">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-label">
+          <span class="gallery-item-tag">Custom</span>
+          Vintage Chic Design
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="gallery-empty" aria-live="polite">
+    <p class="t-body-lg">No cakes in this category yet. Check back soon.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="reveal fade-up">
+    <div class="section-label" style="--rule-color:rgba(255,255,255,0.2)">
+      <span class="t-label" style="color:rgba(255,255,255,0.5)">Like What You See?</span>
+    </div>
+    <h2>Let's make <em>yours</em></h2>
+    <p>Every cake in this gallery started as an idea. Share yours and we'll turn it into something extraordinary.</p>
+  </div>
+  <div class="cta-banner-actions reveal fade-up d1">
+    <a href="order.html" class="btn btn-primary">Order Now</a>
+    <a href="https://wa.me/2347047214558" target="_blank" rel="noopener" class="btn btn-wa">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Juicy Culinary</div>
+      <p class="footer-brand-desc">New age baker where baking meets perfection.<br>Federal Capital Territory, Abuja, Nigeria.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/juicy__culinary" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/2347047214558" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="mailto:Juicyculinary@gmail.com" class="footer-social-link" aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Pages</div>
+      <ul class="footer-col-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="order.html">Order a Cake</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Categories</div>
+      <ul class="footer-col-links">
+        <li><a href="#">Birthday Cakes</a></li>
+        <li><a href="#">Wedding Cakes</a></li>
+        <li><a href="#">Celebration Cakes</a></li>
+        <li><a href="#">Custom Designs</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-col-links">
+        <li><a href="https://wa.me/2347047214558">+234 704 721 4558</a></li>
+        <li><a href="https://instagram.com/juicy__culinary">@juicy__culinary</a></li>
+        <li><a href="mailto:Juicyculinary@gmail.com">Juicyculinary@gmail.com</a></li>
+        <li><span style="color:var(--ink-soft)">Abuja, FCT Nigeria</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Juicy Culinary. All rights reserved.</span>
+    <span>Handcrafted in Abuja, Nigeria <i class="fa-solid fa-heart" style="color:#8B5CF6;font-size:0.75rem"></i></span>
+  </div>
+</footer>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" aria-label="Close"><i class="fa-regular fa-xmark"></i></button>
+  <button class="lb-nav-btn lb-prev" aria-label="Previous"><i class="fa-regular fa-chevron-left"></i></button>
+  <img class="lightbox-img" src="" alt="">
+  <button class="lb-nav-btn lb-next" aria-label="Next"><i class="fa-regular fa-chevron-right"></i></button>
+  <div class="lb-caption"></div>
+</div>
+
+<button class="back-top" aria-label="Back to top"><i class="fa-regular fa-chevron-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>
