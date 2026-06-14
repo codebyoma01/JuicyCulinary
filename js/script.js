@@ -471,3 +471,108 @@ document.addEventListener('DOMContentLoaded', () => {
   initOrderSteps();
   initSmoothScroll();
 });
+/* ============================================================
+   HERO SLIDESHOW
+   Add initHeroSlider() to your script.js and call it in DOMContentLoaded
+   ============================================================ */
+
+function initHeroSlider() {
+  const slider   = document.querySelector('.hero-slider');
+  const slides   = document.querySelectorAll('.hero-slide');
+  const dots     = document.querySelectorAll('.hero-dot');
+  const prevBtn  = document.querySelector('.hero-prev');
+  const nextBtn  = document.querySelector('.hero-next');
+  if (!slider || !slides.length) return;
+
+  let current   = 0;
+  let autoTimer = null;
+  let isAnimating = false;
+  const DURATION = 5000; // 5s per slide
+
+  /* Progress bar */
+  const progress = document.createElement('div');
+  progress.className = 'hero-progress';
+  document.querySelector('.hero')?.appendChild(progress);
+
+  function goTo(index, dir = 1) {
+    if (isAnimating || index === current) return;
+    isAnimating = true;
+
+    const prev = current;
+    current = (index + slides.length) % slides.length;
+
+    // Update slide classes
+    slides[prev].classList.remove('active');
+    slides[current].classList.add('active');
+
+    // Move the slider track
+    slider.style.transform = `translateX(-${current * 100}%)`;
+
+    // Update dots
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+
+    // Reset progress bar
+    progress.style.transition = 'none';
+    progress.style.width = '0%';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        progress.style.transition = `width ${DURATION}ms linear`;
+        progress.style.width = '100%';
+      });
+    });
+
+    setTimeout(() => { isAnimating = false; }, 800);
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1, -1); }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(next, DURATION);
+  }
+
+  function stopAuto() {
+    if (autoTimer) clearInterval(autoTimer);
+  }
+
+  // Arrow buttons
+  nextBtn?.addEventListener('click', () => { next(); startAuto(); });
+  prevBtn?.addEventListener('click', () => { prev(); startAuto(); });
+
+  // Dot buttons
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startAuto(); });
+  });
+
+  // Touch / swipe support
+  let touchStartX = 0;
+  slider.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    stopAuto();
+  }, { passive: true });
+
+  slider.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
+    startAuto();
+  }, { passive: true });
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  { prev(); startAuto(); }
+    if (e.key === 'ArrowRight') { next(); startAuto(); }
+  });
+
+  // Pause on hover
+  const hero = document.querySelector('.hero');
+  hero?.addEventListener('mouseenter', stopAuto);
+  hero?.addEventListener('mouseleave', startAuto);
+
+  // Kick off
+  slides[0].classList.add('active');
+  slider.style.transform = 'translateX(0)';
+  progress.style.transition = `width ${DURATION}ms linear`;
+  progress.style.width = '100%';
+  startAuto();
+}
