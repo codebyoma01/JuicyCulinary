@@ -538,17 +538,20 @@ address { font-style: normal; }
 
 .hero-h1 {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 7rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 400;
-  line-height: 1.0;
-  letter-spacing: -0.01em;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
   color: #fff;
   margin-bottom: 1.5rem;
 }
 
 .hero-h1 em {
+  display: block;
   font-style: italic;
+  font-size: 0.95em;
   color: #C4AFFE;
+  margin-top: 0.15rem;
 }
 
 .hero-desc {
