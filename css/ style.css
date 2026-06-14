@@ -530,7 +530,7 @@ address { font-style: normal; }
 .hero-inner {
   position: relative;
   z-index: 2;
-  padding: 0 7vw 5rem;
+  padding: 10rem 7vw 5rem;
   max-width: 700px;
 }
 
@@ -551,7 +551,7 @@ address { font-style: normal; }
   font-style: italic;
   font-size: 0.95em;
   color: #C4AFFE;
-  margin-top: 0.15rem;
+  margin-top: 2rem;
 }
 
 .hero-desc {
@@ -2455,7 +2455,7 @@ details.faq-item[open] summary::after { content: '−'; }
   .hero-badges { bottom: 2rem; right: 4vw; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .about-strip { grid-template-columns: 1fr; }
   .about-strip-text { padding: 4rem 5vw; }
   .about-strip-photo { min-height: 55vw; }
@@ -2470,7 +2470,7 @@ details.faq-item[open] summary::after { content: '−'; }
     gap: 0.75rem;
   }
   .hero-badge { min-width: 140px; }
-  .hero-inner { padding: 0 5vw 3rem; }
+  .hero-inner { padding: 8 6vw 6rem; }
   .featured-section { padding-left: 5vw; }
   .featured-header { padding-right: 5vw; }
   .featured-track { padding-right: 5vw; }
